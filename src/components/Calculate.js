@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css'; // Add your CSS here
+import './styles.css';
 import '../App.css'
 import { formToJSON } from 'axios';
 
@@ -8,8 +8,8 @@ function Calculator() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
-  const handleClick = (value) => {
-    setInput(input + value);
+  const handleClick = (v) => {
+    setInput(input + v);
   };
 
   const handleClear = () => {
@@ -23,7 +23,7 @@ function Calculator() {
 
   const handleEvaluate = () => {
     try {
-      setResult(eval(input)); // Use eval to calculate the result
+      setResult(eval(input));
     } catch (error) {
       setResult('Error');
     }
